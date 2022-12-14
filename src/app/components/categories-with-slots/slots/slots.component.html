@@ -1,0 +1,19 @@
+<div class="slots-container mt-[12px] mb-2">
+  <ng-container *ngFor="let game of items">
+    <div class="relative group cursor-pointer hover:bg-[#454D57] bg-[#252B33] slots-container--card">
+      <div class="banner-container">
+        <img class="group-hover:opacity-70 object-cover h-[140px] w-full"
+             [src]="game.image"
+             [alt]="game.name">
+        <img
+          class="play-btn h-0 group-hover:h-[44px]"
+          src="../../../../assets/svg/play.svg"
+          alt="play">
+      </div>
+      <div class="text-white pt-[9px] pl-[11.6px] text-[14px] pb-[10px]">{{game.name}}</div>
+      <span
+        *ngIf="game.tags[0]"
+      >{{game.tags[0]}}</span>
+    </div>
+  </ng-container>
+</div>

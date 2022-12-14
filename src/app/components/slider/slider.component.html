@@ -1,0 +1,8 @@
+<div>
+  <div class="h-[60px] bg-[#252B33]"></div>
+  <ng-container *ngFor="let item of items; let i = index ">
+    <div class="absolute my-[8px] w-full pl-[86px]" *ngIf="i == currentSliderIndex" @slideFade>
+      <img class="object-cover h-[420px] w-full" [src]="item">
+    </div>
+  </ng-container>
+</div>

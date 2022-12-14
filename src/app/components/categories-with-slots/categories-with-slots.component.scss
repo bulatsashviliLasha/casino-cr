@@ -1,0 +1,27 @@
+.filter-section {
+  section {
+    div {
+      padding: 17px 15.6px 22px 16.5px;
+
+      .rotate {
+        transition: 0.4s ease-in-out all;
+        transform: rotate(180deg);
+      }
+    }
+
+    ul {
+      transition: all 0.7s ease-in-out;
+
+      li {
+        padding: 17px 15.6px 22px 16.5px;
+        background-color: transparent;
+        line-height: normal;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.animate {
+  max-height: 500px;
+}

@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/reset';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.scroll_top {
+  position: fixed;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  width: 44px;
+  border: 1px solid white;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #627d83;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 20;
+  transition: visibility .4s ease, opacity .4s ease;
+}
+
+.showScroll {
+  transition: 0.4s opacity ease-in-out;
+  opacity: 0.85;
+  visibility: visible;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.scroll_top:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 7px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}

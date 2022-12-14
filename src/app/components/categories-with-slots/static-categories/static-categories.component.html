@@ -1,0 +1,11 @@
+<section class="bg-[#1D242C] static-categories rounded-t-lg">
+  <ul class="flex gap-[28px] pl-[17px]">
+    <ng-container *ngFor="let item of staticCategoriesData">
+      <li class="flex items-center text-white py-[20px] text-[14px] relative">
+        <img [src]="item.svg" [alt]="item.name"> &nbsp; {{item.name}}
+        <span class="text-[11px] font-medium">{{item.number}}</span>
+      </li>
+    </ng-container>
+  </ul>
+</section>
+

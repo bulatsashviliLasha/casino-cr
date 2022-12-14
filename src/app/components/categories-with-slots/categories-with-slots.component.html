@@ -1,0 +1,20 @@
+<main class="mt-[436px] ml-[86px] mr-[4px]">
+  <div class="filter-section">
+    <app-static-categories></app-static-categories>
+    <section class="bg-[#272D36] rounded-b-lg relative">
+      <div class="float-right cursor-pointer" (click)="state = !state">
+        <span class="text-white">{{state ? 'See More' : 'See Less'}}</span>
+        <img [ngClass]="{'rotate' : state}" class="ml-[8px] inline-block" src="../../../assets/svg/upAndDown.svg"
+             alt="up and down svg">
+      </div>
+
+      <ul class="text-[14px] overflow-hidden max-h-[60px] leading-[14px] font-medium max-w-[1350px]"
+          [ngClass]="{'animate' : !state}">
+        <li *ngFor="let item of slots" (click)="getGame(item.provider)"
+            class="text-[#D9E3EF] inline-block">{{item.name | uppercase}}</li>
+      </ul>
+    </section>
+  </div>
+  <app-slots *ngIf="provider" [items]="provider.games"></app-slots>
+</main>
+
